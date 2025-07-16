@@ -12,25 +12,36 @@
             </div>
             <div class="w-full md:w-1/2 py-10 px-5 md:px-10">
                 <div class="text-center mb-10">
-                    <h1 class="font-bold text-3xl text-gray-900">REGISTER</h1>
+                    <img src="/picture/logo.png" alt="logo" class="h-10 mx-auto mb-4">
                     <p>Enter your information to register</p>
                 </div>
                 <div>
                     <div class="flex -mx-3">
                         <div class="w-1/2 px-3 mb-5">
-                            <label for="" class="text-xs font-semibold px-1">First name</label>
+                            <label for="" class="text-xs font-semibold px-1">User name</label>
                             <div class="flex">
                                 <div class="w-10 z-10 pl-1 text-center pointer-events-none flex items-center justify-center"><i class="mdi mdi-account-outline text-gray-400 text-lg"></i></div>
-                                <input type="text" class="w-full -ml-10 pl-10 pr-3 py-2 rounded-lg border-2 border-gray-200 outline-none focus:border-indigo-500" placeholder="Dalexa">
+                                <input type="text" class="w-50 -ml-10 pl-10 pr-3 py-2 rounded-lg border-2 border-gray-200 outline-none focus:border-indigo-500" placeholder="Dalexa">
                             </div>
                         </div>
-                        <div class="w-1/2 px-3 mb-5">
-                            <label for="" class="text-xs font-semibold px-1">Last name</label>
-                            <div class="flex">
-                                <div class="w-10 z-10 pl-1 text-center pointer-events-none flex items-center justify-center"><i class="mdi mdi-account-outline text-gray-400 text-lg"></i></div>
-                                <input type="text" class="w-full -ml-10 pl-10 pr-3 py-2 rounded-lg border-2 border-gray-200 outline-none focus:border-indigo-500" placeholder="Sanjuan">
-                            </div>
+                <div class="w-1/1 px-3 mb-4">
+                    <label for="occupation" class="text-xs font-semibold px-1">Occupation</label>
+                    <div class="flex relative">
+                        <div class="w-8 z-10 pl-1 text-center pointer-events-none flex items-center justify-center">
+                        <i class="mdi mdi-briefcase-outline text-gray-400 text-lg"></i>
                         </div>
+                        <select id="occupation" class="w-full -ml-10 pl-10 pr-3 py-2 rounded-lg border-2 border-gray-200 outline-none focus:border-indigo-500 text-gray-500">
+                        <option value="" disabled selected>Select your occupation</option>
+                        <option>Frontend Developer</option>
+                        <option>Backend Developer</option>
+                        <option>Fullstack Developer</option>
+                        <option>DevOps Engineer</option>
+                        <option>QA Engineer</option>
+                        <option>UI/UX Designer</option>
+                        <option>Product Manager</option>
+                        </select>
+                    </div>
+                    </div>
                     </div>
                     <div class="flex -mx-3">
                         <div class="w-full px-3 mb-5">
@@ -58,14 +69,5 @@
                 </div>
             </div>
         </div>
-    </div>
-</div>
-
-
-<div class="flex items-end justify-end fixed bottom-0 right-0 mb-4 mr-4 z-10">
-    <div>
-        <a title="Buy me a beer" href="https://www.buymeacoffee.com/scottwindon" target="_blank" class="block w-16 h-16 rounded-full transition-all shadow hover:shadow-lg transform hover:scale-110 hover:rotate-12">
-            <img class="object-cover object-center w-full h-full rounded-full" src="https://i.pinimg.com/originals/60/fd/e8/60fde811b6be57094e0abc69d9c2622a.jpg"/>
-        </a>
     </div>
 </div>
