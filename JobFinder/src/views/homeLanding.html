@@ -1,19 +1,43 @@
-<nav>
-    <ul class="nav-list">
-        <li class="title-jobfinder">JobFinder</li>
-        <div>
-            <li><a href="/" data-link>Home</a></li>
-            <li><a href="">About us</a></li>
-            <li><a href="">Contact</a></li>
-        </div>
-        <div>
-            <li><a href="/login" data-link>Login</a></li>
-            <li><a href="/register" data-link>Register</a></li>
-        </div>
-    </ul>
-</nav>
-<main>
-    <div id="view-container">
-        <!-- Dynamic content will be loaded here -->
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css">
+<div class="bg-white">
+  <header class="absolute inset-x-0 top-0 z-50">
+    <nav aria-label="Global" class="flex items-center justify-between p-6 lg:px-8">
+      <div class="flex lg:flex-1">
+        <a href="#" class="-m-1.5 p-1.5">
+          <span class="sr-only">FreelaHub</span>
+          <img src="https://tailwindcss.com/plus-assets/img/logos/mark.svg?color=indigo&shade=600" alt="FreelaHub Logo" class="h-8 w-auto" />
+        </a>
+      </div>
+      <div class="hidden lg:flex lg:gap-x-12">
+        <a href="#" class="text-sm font-semibold text-gray-900">Cómo funciona</a>
+        <a href="#" class="text-sm font-semibold text-gray-900">Para empresas</a>
+        <a href="#" class="text-sm font-semibold text-gray-900">Para freelancers</a>
+        <a href="#" class="text-sm font-semibold text-gray-900">Contacto</a>
+      </div>
+      <div class="hidden lg:flex lg:flex-1 lg:justify-end">
+        <a href="#" class="text-sm font-semibold text-gray-900">Ingresar <span aria-hidden="true">&rarr;</span></a>
+      </div>
+    </nav>
+  </header>
+
+  <div class="relative isolate px-6 pt-14 lg:px-8">
+    <div aria-hidden="true" class="absolute inset-x-0 -top-40 -z-10 transform-gpu overflow-hidden blur-3xl sm:-top-80">
+      <div class="relative left-1/2 w-[36rem] -translate-x-1/2 rotate-30 bg-gradient-to-tr from-[#ff80b5] to-[#9089fc] opacity-30 sm:w-[72rem]"></div>
     </div>
-</main>
+
+    <div class="mx-auto max-w-2xl py-32 sm:py-48 lg:py-56">
+      <div class="text-center">
+        <h1 class="text-5xl font-semibold tracking-tight text-gray-900 sm:text-7xl">Conecta talento con proyectos reales</h1>
+        <p class="mt-6 text-lg text-gray-600 sm:text-xl">FreelaHub permite a empresas publicar proyectos por áreas específicas y cupos limitados. Freelancers aplican según su perfil y disponibilidad. Todo en una sola plataforma.</p>
+        <div class="mt-10 flex items-center justify-center gap-x-6">
+          <a href="#" class="rounded-md bg-indigo-600 px-4 py-2.5 text-sm font-semibold text-white shadow-sm hover:bg-indigo-500">Publica un proyecto</a>
+          <a href="#" class="text-sm font-semibold text-gray-900">Soy freelancer <span aria-hidden="true">→</span></a>
+        </div>
+      </div>
+    </div>
+
+    <div aria-hidden="true" class="absolute inset-x-0 top-[calc(100%-13rem)] -z-10 transform-gpu overflow-hidden blur-3xl sm:top-[calc(100%-30rem)]">
+      <div class="relative left-1/2 w-[36rem] -translate-x-1/2 bg-gradient-to-tr from-[#ff80b5] to-[#9089fc] opacity-30 sm:w-[72rem]"></div>
+    </div>
+  </div>
+</div>
