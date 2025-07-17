@@ -1,5 +1,6 @@
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css">
 <div class="bg-white">
+  <!-- Header -->
   <header class="absolute inset-x-0 top-0 z-50">
     <nav aria-label="Global" class="flex items-center justify-between p-6 lg:px-8">
       <div class="flex lg:flex-1">
@@ -9,9 +10,9 @@
         </a>
       </div>
       <div class="hidden lg:flex lg:gap-x-12">
-        <a href="#" class="text-sm font-semibold text-gray-900">Cómo funciona</a>
-        <a href="#" class="text-sm font-semibold text-gray-900">Para empresas</a>
-        <a href="#" class="text-sm font-semibold text-gray-900">Para freelancers</a>
+        <a href="#training-top" class="text-sm font-semibold text-gray-900">Top estudiantes</a>
+        <a href="#topics" class="text-sm font-semibold text-gray-900">Trending topics</a>
+        <a href="#requisitos" class="text-sm font-semibold text-gray-900">Requisitos por perfil</a>
         <a href="#" class="text-sm font-semibold text-gray-900">Contacto</a>
       </div>
       <div class="hidden lg:flex lg:flex-1 lg:justify-end">
@@ -20,24 +21,79 @@
     </nav>
   </header>
 
+  <!-- Hero -->
   <div class="relative isolate px-6 pt-14 lg:px-8">
-    <div aria-hidden="true" class="absolute inset-x-0 -top-40 -z-10 transform-gpu overflow-hidden blur-3xl sm:-top-80">
-      <div class="relative left-1/2 w-[36rem] -translate-x-1/2 rotate-30 bg-gradient-to-tr from-[#ff80b5] to-[#9089fc] opacity-30 sm:w-[72rem]"></div>
+    <div class="mx-auto max-w-2xl py-32 sm:py-48 lg:py-56 text-center">
+      <h1 class="text-5xl font-semibold tracking-tight text-gray-900 sm:text-7xl">Conecta talento con proyectos reales</h1>
+      <p class="mt-6 text-lg text-gray-600 sm:text-xl">FreelaHub permite a empresas publicar proyectos con cupos por perfil. Estudiantes y freelancers aplican según su área técnica. Ideal para instituciones y bootcamps.</p>
+      <div class="mt-10 flex justify-center gap-x-6">
+        <a href="/login" class="rounded-md bg-indigo-600 px-4 py-2.5 text-sm font-semibold text-white shadow-sm hover:bg-indigo-500" data-link="">Publicar requerimiento</a>
+        <a href="#" class="text-sm font-semibold text-gray-900">Soy estudiante <span aria-hidden="true">→</span></a>
+      </div>
     </div>
+  </div>
 
-    <div class="mx-auto max-w-2xl py-32 sm:py-48 lg:py-56">
-      <div class="text-center">
-        <h1 class="text-5xl font-semibold tracking-tight text-gray-900 sm:text-7xl">Conecta talento con proyectos reales</h1>
-        <p class="mt-6 text-lg text-gray-600 sm:text-xl">FreelaHub permite a empresas publicar proyectos por áreas específicas y cupos limitados. Freelancers aplican según su perfil y disponibilidad. Todo en una sola plataforma.</p>
-        <div class="mt-10 flex items-center justify-center gap-x-6">
-          <a href="#" class="rounded-md bg-indigo-600 px-4 py-2.5 text-sm font-semibold text-white shadow-sm hover:bg-indigo-500">Publica un proyecto</a>
-          <a href="#" class="text-sm font-semibold text-gray-900">Soy freelancer <span aria-hidden="true">→</span></a>
+  <!-- Top Estudiantes -->
+  <section id="training-top" class="bg-gray-50 py-20">
+    <div class="max-w-6xl mx-auto px-6">
+      <h2 class="text-3xl font-bold text-center text-gray-900 mb-10">🏆 Top estudiantes de la semana</h2>
+      <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6">
+        <div class="bg-white p-6 rounded-lg shadow text-center">
+          <h3 class="text-lg font-semibold text-gray-900">Ana Ríos</h3>
+          <p class="text-sm text-gray-600">Especialidad: Backend</p>
+          <p class="mt-2 text-indigo-600 font-bold text-xl">98 pts</p>
+        </div>
+        <div class="bg-white p-6 rounded-lg shadow text-center">
+          <h3 class="text-lg font-semibold text-gray-900">Luis Gómez</h3>
+          <p class="text-sm text-gray-600">Especialidad: Frontend</p>
+          <p class="mt-2 text-indigo-600 font-bold text-xl">95 pts</p>
+        </div>
+        <div class="bg-white p-6 rounded-lg shadow text-center">
+          <h3 class="text-lg font-semibold text-gray-900">María Torres</h3>
+          <p class="text-sm text-gray-600">Especialidad: UX/UI</p>
+          <p class="mt-2 text-indigo-600 font-bold text-xl">93 pts</p>
         </div>
       </div>
     </div>
+  </section>
 
-    <div aria-hidden="true" class="absolute inset-x-0 top-[calc(100%-13rem)] -z-10 transform-gpu overflow-hidden blur-3xl sm:top-[calc(100%-30rem)]">
-      <div class="relative left-1/2 w-[36rem] -translate-x-1/2 bg-gradient-to-tr from-[#ff80b5] to-[#9089fc] opacity-30 sm:w-[72rem]"></div>
+  <!-- Trending Topics -->
+  <section id="topics" class="bg-white py-20">
+    <div class="max-w-6xl mx-auto px-6">
+      <h2 class="text-3xl font-bold text-center text-gray-900 mb-10">🔥 Trending topics de la semana</h2>
+      <div class="space-y-6">
+        <div class="border-b pb-4">
+          <h3 class="text-xl font-semibold text-indigo-700">Async/Await en JavaScript</h3>
+          <a href="https://developer.mozilla.org/es/docs/Web/JavaScript/Reference/Statements/async_function" class="text-sm text-indigo-500 hover:underline" target="_blank">Ver recurso →</a>
+        </div>
+        <div class="border-b pb-4">
+          <h3 class="text-xl font-semibold text-indigo-700">React Hooks Básicos</h3>
+          <a href="https://react.dev/learn" class="text-sm text-indigo-500 hover:underline" target="_blank">Ver recurso →</a>
+        </div>
+        <div class="border-b pb-4">
+          <h3 class="text-xl font-semibold text-indigo-700">Testing con Jest</h3>
+          <a href="https://jestjs.io/docs/getting-started" class="text-sm text-indigo-500 hover:underline" target="_blank">Ver recurso →</a>
+        </div>
+      </div>
     </div>
-  </div>
+  </section>
+
+  <!-- Requerimientos por perfil -->
+  <section id="requisitos" class="bg-gray-50 py-20">
+    <div class="max-w-6xl mx-auto px-6">
+      <h2 class="text-3xl font-bold text-center text-gray-900 mb-10">💼 Requerimientos por perfil</h2>
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+        <div class="bg-white p-6 rounded-lg shadow">
+          <h3 class="text-lg font-semibold text-gray-800">Frontend</h3>
+          <p class="text-gray-600 mt-2">Buscamos estudiantes con conocimientos en React y Tailwind para prototipar una landing institucional.</p>
+          <p class="mt-2 text-sm text-gray-500">Nivel sugerido: Intermedio</p>
+        </div>
+        <div class="bg-white p-6 rounded-lg shadow">
+          <h3 class="text-lg font-semibold text-gray-800">QA / Testing</h3>
+          <p class="text-gray-600 mt-2">Requerimos 1 tester para validar flujos en un proyecto Node/Express.</p>
+          <p class="mt-2 text-sm text-gray-500">Nivel sugerido: Principiante</p>
+        </div>
+      </div>
+    </div>
+  </section>
 </div>

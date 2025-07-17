@@ -1,4 +1,4 @@
-import { apiRequest } from './api/request';
+import { apiRequest } from '../api/requests.js';
 
 // Encodes user data and stores token in localStorage
 export function dataEncoding(user) {
