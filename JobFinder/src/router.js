@@ -1,3 +1,4 @@
+import { getUserLogged } from './services/storage';
 // Maps each path to its corresponding HTML view
 
 const routes = {
@@ -15,10 +16,18 @@ const controllers = {
     '/dashboard': './controllers/dashboard.js',
     '/404'      : 'src/controllers/404.js',
 };
+
+
 // Access rules for protected routes
+const guards = {
+    '/login'     : (user) => !user,
+    '/dashboard' : (user) => user?.rol === 'admi',
+    '/events'    : (user) => user?.rol === 'visitante'
+};
 
 const app = document.getElementById('app');
 
+// Loads the HTML view and initializes the controller if available
 export async function loadView(path) {
     const view = routes[path] || routes['/404'];
     try {
@@ -36,4 +45,48 @@ export async function loadView(path) {
         console.log(error);
         app.innerHTML = `<h1> Unexpected error while loading the view. </h1>`;
     }
+}
+
+// Validates access based on user role and defined guards
+function checkAcces(path, user) {
+    const guard = guards[path];
+
+    if (guard && !guard(user)) {
+        if (path === '/login' && user) {
+            return user.rol === 'admi' ? '/dashboard' : '/events';
+        }
+        return user ? '/404' : '/login';
+    }
+
+    return path;
+}
+
+// Main navigation handler
+export function navegation(path) {
+    const user = getUserLogged();
+    const accessRoute = checkAcces(path, user);
+
+    if (!accessRoute) return;
+    history.pushState(null, null, accessRoute);
+    loadView(accessRoute);
+}
+
+// Handles browser back/forward button
+window.addEventListener('popstate', () => {
+    navegation(location.pathname);
+});
+
+// Intercepts <a data-link> clicks for SPA routing
+export function navegationTag() {
+    document.addEventListener('click', (event) => {
+        const elemento = event.target.closest('[data-link]');
+        if (!elemento) return;
+
+        event.preventDefault();
+
+        const path = elemento.getAttribute('href') || elemento.getAttribute('data-link');
+        if (path) {
+            navegation(path);
+        }
+    });
 }
