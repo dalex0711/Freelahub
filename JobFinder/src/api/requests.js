@@ -1,4 +1,5 @@
 import { showMessage } from "../services/message.js";
+import { showMessage } from "../services/messages";
 
 const apiUrl = 'http://localhost:3000/';
 
