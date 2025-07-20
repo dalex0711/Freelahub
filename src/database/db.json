@@ -1,0 +1,29 @@
+{
+  "users": [
+    {
+      "name": "user1",
+      "email": "user@gmail.com",
+      "password": "bcb4dead2eb9cf647f0b065497c1d74f95fd60df6ec1d51ae005e938ca1c1015caf52491cf0a4e61a41f12187e32e6eb5f147fe0d22ff540bba55f7470fbfb6e",
+      "rol": "student",
+      "id": 1
+    }
+  ],
+  "profiles": [
+    {
+      "userId": 1,
+      "nombre": "Pedro Picapiedra",
+      "telefono": "3002150047",
+      "ciudad": "Barranquilla",
+      "institucion": "Riwi",
+      "programa": "Desarrollo de sofware",
+      "habilidades": [
+        "Javascript",
+        "css",
+        "html"
+      ],
+      "descripcion": "Soy pedro picapiedra, el que pica piedra.",
+      "cvUrl": "http://localhost:5173/profile",
+      "id": 1
+    }
+  ]
+}
