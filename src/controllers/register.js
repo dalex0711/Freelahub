@@ -6,6 +6,16 @@ import { showMessage } from '../services/message.js';
 
 // Initialize register form behavior
 export function init() {
+
+  //Checkbox to show password
+  const passwordInput = document.getElementById('password');
+  const togglePasswordCheckbox = document.getElementById('show-password');
+
+    togglePasswordCheckbox.addEventListener('change', () => {
+        passwordInput.type = togglePasswordCheckbox.checked ? 'text' : 'password';
+    });
+
+  // form
   const registerForm = document.querySelector('#register-form');
 
   registerForm.addEventListener('submit', async (event) => {

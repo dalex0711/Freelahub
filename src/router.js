@@ -30,6 +30,7 @@ const guards = {
     '/dashboard' : (user) => user?.rol === 'admin',
     '/student': (user) => user?.rol === 'student',
     '/company'   : (user) => user?.rol === 'company',
+    '/profile' : (user) => !!user,
 
 };
 

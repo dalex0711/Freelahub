@@ -1,11 +1,12 @@
 import { getUserLogged } from '../../services/storage.js';
-import {validateInputs} from '../../services/validations.js'
+import { btnLogout } from '../../services/logout.js';
 import { apiRequest } from '../../api/requests.js';
 import { createIcons, icons } from 'lucide';
 
 
 export async function init() {
-   createIcons({ icons });
+  btnLogout()
+  createIcons({ icons });
   if (location.search === '') {
     const user = getUserLogged();
     const userDetails = await apiRequest('GET', `profiles?userId=${user.id}`);

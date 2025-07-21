@@ -5,6 +5,15 @@ import { showMessage } from '../services/message.js';
 
 // Initialize login form logic
 export function init() {
+
+    const passwordInput = document.getElementById('password');
+    const togglePasswordCheckbox = document.getElementById('show-password');
+
+    togglePasswordCheckbox.addEventListener('change', () => {
+        passwordInput.type = togglePasswordCheckbox.checked ? 'text' : 'password';
+    });
+
+    
     const loginForm = document.querySelector('#login-form');
 
     // Handle form submission

@@ -1,4 +1,7 @@
+
+
 export function renderPersonalInfoCard(container) {
+   
   const data = {
     nombre: "Dalexa",
     apellido: "Sanjuan",

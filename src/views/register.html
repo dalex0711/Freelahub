@@ -1,41 +1,101 @@
-<div class="min-h-screen bg-gradient-to-br from-white via-[#f4f4ff] to-[#e7e9fd] flex items-center justify-center px-4">
-  <div class="w-full max-w-md bg-white border border-gray-200 rounded-xl shadow-sm p-8">
-    
-    <div class="mb-6 text-center">
-      <img src="/picture/logo.png" alt="Logo" class="h-10 mx-auto mb-4">
-      <h2 class="text-xl font-semibold text-gray-800">Crear cuenta</h2>
+<div class="min-h-screen bg-white/90 flex items-center justify-center px-4">
+  <div class="w-full max-w-xl bg-white/95 border border-slate-400 rounded-xl shadow-lg hover:shadow-2xl transition-shadow duration-300 px-8 py-10">
+
+    <!-- Logo -->
+    <div class="mb-4 text-center">
+      <img src="/picture/logo.png" alt="Logo" class="h-10 mx-auto">
     </div>
 
-    <form id="register-form" class="space-y-5">
-      <!-- Nombre -->
-      <div>
-        <label class="block text-sm text-gray-700 font-medium mb-1">Nombre de usuario</label>
-        <input id="name" type="text" placeholder="usuario" class="w-full border border-gray-300 rounded-md px-4 py-2 focus:outline-none focus:border-indigo-500">
+    <!-- Mensaje de seguridad -->
+  <p class="text-center text-lg text-gray-800 font-semibold mb-6 tracking-wide">
+    Login / <span class="text-[#5B4BDF]">Register</span>
+</p>
+
+
+
+    <!-- Formulario -->
+    <form id="register-form" class="space-y-6">
+
+      <!-- Nombre de usuario -->
+      <div class="relative">
+        <input
+          id="name"
+          type="text"
+          placeholder="Usuario"
+          required
+          class="peer w-full border border-slate-400 rounded-md px-3 pt-6 pb-2 text-sm bg-white text-gray-900
+                 focus:outline-none focus:ring-0 focus:border-slate-500 placeholder-transparent transition-all duration-200"
+        />
+        <label
+          for="name"
+          class="absolute -top-3 left-3 text-xs bg-white px-1 text-slate-600
+                 peer-placeholder-shown:text-base peer-placeholder-shown:top-3.5
+                 peer-focus:-top-3 peer-focus:text-xs peer-focus:text-slate-700 transition-all"
+        >
+          Nombre de usuario
+        </label>
       </div>
 
-      <!-- Email -->
-      <div>
-        <label class="block text-sm text-gray-700 font-medium mb-1">Correo electrónico</label>
-        <input id="email" type="email" placeholder="user@correo.com" class="w-full border border-gray-300 rounded-md px-4 py-2 focus:outline-none focus:border-indigo-500">
+      <!-- Correo electrónico -->
+      <div class="relative">
+        <input
+          id="email"
+          type="email"
+          placeholder="Correo electrónico"
+          required
+          class="peer w-full border border-slate-400 rounded-md px-3 pt-6 pb-2 text-sm bg-white text-gray-900
+                 focus:outline-none focus:ring-0 focus:border-slate-500 placeholder-transparent transition-all duration-200"
+        />
+        <label
+          for="email"
+          class="absolute -top-3 left-3 text-xs bg-white px-1 text-slate-600
+                 peer-placeholder-shown:text-base peer-placeholder-shown:top-3.5
+                 peer-focus:-top-3 peer-focus:text-xs peer-focus:text-slate-700 transition-all"
+        >
+          Correo electrónico
+        </label>
       </div>
 
-      <!-- Password -->
-      <div>
-        <label class="block text-sm text-gray-700 font-medium mb-1">Contraseña</label>
-        <input id="password" type="password" placeholder="**********" class="w-full border border-gray-300 rounded-md px-4 py-2 focus:outline-none focus:border-indigo-500">
+      <!-- Contraseña -->
+      <div class="relative">
+        <input
+          id="password"
+          type="password"
+          placeholder="Contraseña"
+          required
+          class="peer w-full border border-slate-400 rounded-md px-3 pt-6 pb-2 text-sm bg-white text-gray-900
+                 focus:outline-none focus:ring-0 focus:border-slate-500 placeholder-transparent transition-all duration-200"
+        />
+        <label
+          for="password"
+          class="absolute -top-3 left-3 text-xs bg-white px-1 text-slate-600
+                 peer-placeholder-shown:text-base peer-placeholder-shown:top-3.5
+                 peer-focus:-top-3 peer-focus:text-xs peer-focus:text-slate-700 transition-all"
+        >
+          Contraseña
+        </label>
+      </div>
+
+      <!-- Mostrar contraseña -->
+      <div class="flex items-center text-sm text-slate-600">
+        <input
+          type="checkbox"
+          id="show-password"
+          class="mr-2 accent-[#5B4BDF]"
+        />
+        <label for="show-password">Mostrar contraseña</label>
       </div>
 
       <!-- Botón -->
-      <div>
-        <button type="submit" class="w-full bg-[#5B4BDF] hover:bg-[#4a39c6] text-white py-2 rounded-md font-medium transition duration-200">
-          Registrarse
-        </button>
-      </div>
+      <button type="submit" class="w-full bg-[#5B4BDF] hover:bg-[#4938c3] text-white py-2.5 rounded-md font-semibold transition duration-200">
+        Registrarse
+      </button>
 
-      <!-- Enlaces -->
-      <div class="text-center text-sm text-gray-500">
-        ¿Ya tienes cuenta? <a href="/login" class="text-[#5B4BDF] hover:underline">Inicia sesión</a>
-      </div>
+      <!-- Enlace a login -->
+      <p class="text-center text-sm text-gray-500">
+        ¿Ya tienes cuenta?
+        <a href="/login" class="text-[#5B4BDF] hover:underline font-medium">Inicia sesión</a>
+      </p>
     </form>
   </div>
 </div>
