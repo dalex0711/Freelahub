@@ -1,80 +1,114 @@
-<template id="perfil-template">
-  <div class="max-w-4xl mx-auto px-4 py-12">
+<header id="main-header" class="hidden bg-white/90 backdrop-blur fixed w-full z-20 top-0 start-0 border-b border-gray-200 shadow-sm">
+  <nav class="max-w-screen-xl mx-auto flex items-center justify-between py-3 px-4 md:py-4">
+    <a href="/" class="flex items-center space-x-3">
+      <img src="../../../public/picture/logo.png" class="h-8" alt="FreelaHub Logo" />
+    </a>
 
+    <div class="flex items-center space-x-4">
+      <ul class="hidden md:flex space-x-8 text-sm font-medium">
+        <li><a href="/student" class="text-gray-700 hover:text-blue-700">Ofertas</a></li>
+        <li><a href="/student/applications" class="text-gray-700 hover:text-blue-700">Aplicaciones</a></li>
+        <li><a href="/profile" class="text-blue-700">Perfil</a></li>
+
+      </ul>
+
+      <button class="text-blue-600 border border-blue-600 hover:bg-blue-600 hover:text-white px-4 py-2 rounded-lg text-sm font-medium transition">
+        Cerrar sesión
+      </button>
+
+      <button id="menu-toggle" type="button" class="md:hidden text-gray-500 hover:text-gray-700 focus:outline-none">
+        <svg class="w-6 h-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+            d="M4 6h16M4 12h16M4 18h16" />
+        </svg>
+      </button>
+    </div>
+  </nav>
+</header>
+
+<template id="template-container">
+  <div class="max-w-5xl mx-auto px-4 py-12 pt-32">
     <!-- Encabezado -->
-    <section class="flex flex-col sm:flex-row sm:items-center sm:justify-between mb-12 gap-4">
-      <div>
-        <h1 class="text-3xl font-bold text-neutral-900">Perfil del Candidato</h1>
-        <p class="text-gray-500 text-sm">Información detallada del postulante</p>
-      </div>
+    <section class="mb-10">
+      <h1 class="text-3xl font-bold text-neutral-900">Perfil del Candidato</h1>
+      <p class="text-gray-500 text-sm mt-1">Información detallada del postulante</p>
     </section>
 
-    <!-- Información personal -->
-    <section class="bg-white border border-gray-200 rounded-2xl p-8 mb-10 shadow-sm">
-      <header class="flex items-center gap-2 mb-6">
-        <i data-lucide="user" class="w-6 h-6 text-neutral-800"></i>
-        <h2 class="text-xl font-semibold text-neutral-900">Información personal</h2>
-      </header>
+    <!-- Panel principal -->
+    <div class="bg-white border border-gray-200 rounded-xl shadow-md flex flex-col sm:flex-row-reverse overflow-hidden">
+      
+      <!-- Lado derecho: Avatar y nombre -->
+      <aside class="bg-gray-50 w-full sm:w-1/4 p-6 flex flex-col items-center justify-center border-t sm:border-t-0 sm:border-l border-gray-200">
+        <img id="avatar" class="w-28 h-28 rounded-full border border-gray-300 shadow-sm mb-3">
+        <span id="name" class="text-lg font-semibold text-gray-800 text-center"></span>
+      </aside>
 
-      <div class="flex flex-col sm:flex-row sm:items-start gap-8">
-        <!-- Avatar y nombre -->
-        <div class="flex flex-col items-center gap-2 text-center">
-          <img id="avatar" class="w-28 h-28 rounded-full border border-gray-300 shadow-sm">
-          <span id="name" class="text-lg font-semibold text-gray-800"></span>
-        </div>
-
-        <!-- Detalles -->
-        <div class="grid grid-cols-1 sm:grid-cols-2 gap-4 text-sm text-gray-700 flex-1">
-          <p class="flex items-center gap-2"><i data-lucide="phone" class="w-4 h-4 text-gray-500"></i><span id="cellPhone"></span></p>
-          <p class="flex items-center gap-2"><i data-lucide="mail" class="w-4 h-4 text-gray-500"></i><span id="mail"></span></p>
-          <p class="flex items-center gap-2"><i data-lucide="map-pin" class="w-4 h-4 text-gray-500"></i><span id="city"></span></p>
-          <p class="flex items-center gap-2"><i data-lucide="school" class="w-4 h-4 text-gray-500"></i><span id="institution"></span></p>
-          <p class="flex items-center gap-2"><i data-lucide="book-open" class="w-4 h-4 text-gray-500"></i><span id="program"></span></p>
-        </div>
+      <!-- Lado izquierdo: Detalles personales -->
+      <div class="w-full p-6 space-y-6 sm:w-3/4">
+        <section>
+          <header class="flex items-center gap-2 mb-3">
+            <i data-lucide="user" class="w-5 h-5 text-neutral-800"></i>
+            <h2 class="text-lg font-semibold text-neutral-900">Información personal</h2>
+          </header>
+          <div class="grid grid-cols-1 sm:grid-cols-2 gap-4 text-sm text-gray-700">
+            <p class="flex items-center gap-2"><i data-lucide="phone" class="w-4 h-4 text-gray-500"></i><span id="cellPhone"></span></p>
+            <p class="flex items-center gap-2"><i data-lucide="mail" class="w-4 h-4 text-gray-500"></i><span id="mail"></span></p>
+            <p class="flex items-center gap-2"><i data-lucide="map-pin" class="w-4 h-4 text-gray-500"></i><span id="city"></span></p>
+            <p class="flex items-center gap-2"><i data-lucide="school" class="w-4 h-4 text-gray-500"></i><span id="institution"></span></p>
+            <p class="flex items-center gap-2"><i data-lucide="book-open" class="w-4 h-4 text-gray-500"></i><span id="program"></span></p>
+          </div>
+        </section>
       </div>
-    </section>
+    </div>
 
     <!-- Descripción -->
-    <section class="bg-white border border-gray-200 rounded-2xl p-8 mb-10 shadow-sm">
-      <header class="flex items-center gap-2 mb-4">
-        <i data-lucide="message-circle" class="w-6 h-6 text-neutral-800"></i>
-        <h2 class="text-xl font-semibold text-neutral-900">Descripción</h2>
+    <section class="bg-white border border-gray-200 rounded-2xl p-6 mt-10 shadow-sm">
+      <header class="flex items-center gap-2 mb-2">
+        <i data-lucide="message-circle" class="w-5 h-5 text-neutral-800"></i>
+        <h2 class="text-lg font-semibold text-neutral-900">Descripción</h2>
       </header>
       <p id="descripcion" class="text-sm text-gray-700 leading-relaxed"></p>
     </section>
 
     <!-- Habilidades -->
-    <section class="bg-white border border-gray-200 rounded-2xl p-8 mb-10 shadow-sm">
-      <header class="flex items-center gap-2 mb-4">
-        <i data-lucide="settings" class="w-6 h-6 text-neutral-800"></i>
-        <h2 class="text-xl font-semibold text-neutral-900">Habilidades</h2>
+    <section class="bg-white border border-gray-200 rounded-2xl p-6 mt-6 shadow-sm">
+      <header class="flex items-center gap-2 mb-2">
+        <i data-lucide="settings" class="w-5 h-5 text-neutral-800"></i>
+        <h2 class="text-lg font-semibold text-neutral-900">Habilidades</h2>
       </header>
       <ul id="skills" class="flex flex-wrap gap-2 text-sm text-gray-800"></ul>
     </section>
 
-    <!-- Hoja de vida -->
-    <section class="bg-white border border-gray-200 rounded-2xl p-8 shadow-sm">
-      <header class="flex items-center gap-2 mb-4">
-        <i data-lucide="file-text" class="w-6 h-6 text-neutral-800"></i>
-        <h2 class="text-xl font-semibold text-neutral-900">Hoja de vida</h2>
+    <!-- Idiomas -->
+    <section class="bg-white border border-gray-200 rounded-2xl p-6 mt-6 shadow-sm">
+      <header class="flex items-center gap-2 mb-2">
+        <i data-lucide="globe" class="w-5 h-5 text-neutral-800"></i>
+        <h2 class="text-lg font-semibold text-neutral-900">Idiomas</h2>
       </header>
-      <p class="text-sm text-gray-700 mb-4">Puedes visualizar el archivo cargado por el estudiante:</p>
+      <ul id="languages" class="flex flex-wrap gap-2 text-sm text-gray-800"></ul>
+    </section>
+
+    <!-- Hoja de vida -->
+    <section class="bg-white border border-gray-200 rounded-2xl p-6 mt-6 shadow-sm">
+      <header class="flex items-center gap-2 mb-2">
+        <i data-lucide="file-text" class="w-5 h-5 text-neutral-800"></i>
+        <h2 class="text-lg font-semibold text-neutral-900">Hoja de vida</h2>
+      </header>
+      <p class="text-sm text-gray-700 mb-2">Puedes visualizar el archivo cargado por el estudiante:</p>
       <a id="perfil-cv" href="#" target="_blank"
-         class="text-purple-600 hover:text-purple-800 text-sm font-medium underline">
+         class="text-indigo-600 hover:text-indigo-800 text-sm font-medium underline">
         Ver hoja de vida (PDF)
       </a>
     </section>
-
   </div>
 </template>
 
-<!-- Lugar donde se renderizará -->
-<div id="perfil-container"></div>
+<div id="profile-container"></div>
+
 
 <!-------------FORMULARIO-->
-
 <section id="formulario-perfil" class="hidden fixed inset-0 bg-white flex items-center justify-center z-50">
-  <div class="w-full max-w-2xl bg-white border border-gray-200 rounded-xl p-8 shadow-lg">
+  <div class="w-full max-w-2xl bg-white border border-gray-200 rounded-xl p-8 shadow-lg max-h-[90vh] overflow-y-auto">
     <h2 class="text-xl font-bold mb-6 text-slate-800 text-center">Completa tu perfil</h2>
 
     <form id="perfil-form" class="grid grid-cols-1 sm:grid-cols-2 gap-4 text-sm text-gray-800">
@@ -84,52 +118,70 @@
         <label for="nombre" class="mb-1 font-medium flex items-center gap-1">
           <i data-lucide="user" class="w-4 h-4 text-gray-500"></i>Nombre completo
         </label>
-        <input type="text" id="nombre" name="nombre" required
+        <input type="text" id="name" name="name" required
           class="border border-gray-300 rounded-md px-3 py-2 focus:outline-none focus:ring-2 focus:ring-blue-400" />
       </div>
 
       <!-- Teléfono -->
       <div class="flex flex-col">
-        <label for="telefono" class="mb-1 font-medium flex items-center gap-1">
+        <label for="cellPhone" class="mb-1 font-medium flex items-center gap-1">
           <i data-lucide="phone" class="w-4 h-4 text-gray-500"></i>Teléfono
         </label>
-        <input type="text" id="telefono" name="telefono" required
+        <input type="text" id="cellPhone" name="cellPhone" required
+          class="border border-gray-300 rounded-md px-3 py-2 focus:outline-none focus:ring-2 focus:ring-blue-400" />
+      </div>
+
+      <!-- Correo electrónico -->
+      <div class="flex flex-col">
+        <label for="mail" class="mb-1 font-medium flex items-center gap-1">
+          <i data-lucide="mail" class="w-4 h-4 text-gray-500"></i>Correo electrónico
+        </label>
+        <input type="mail" id="correo" name="mail" required
           class="border border-gray-300 rounded-md px-3 py-2 focus:outline-none focus:ring-2 focus:ring-blue-400" />
       </div>
 
       <!-- Ciudad -->
       <div class="flex flex-col">
-        <label for="ciudad" class="mb-1 font-medium flex items-center gap-1">
+        <label for="city" class="mb-1 font-medium flex items-center gap-1">
           <i data-lucide="map-pin" class="w-4 h-4 text-gray-500"></i>Ciudad
         </label>
-        <input type="text" id="ciudad" name="ciudad" required
+        <input type="text" id="city" name="city" required
           class="border border-gray-300 rounded-md px-3 py-2 focus:outline-none focus:ring-2 focus:ring-blue-400" />
       </div>
 
       <!-- Institución -->
       <div class="flex flex-col">
-        <label for="institucion" class="mb-1 font-medium flex items-center gap-1">
+        <label for="institution" class="mb-1 font-medium flex items-center gap-1">
           <i data-lucide="school" class="w-4 h-4 text-gray-500"></i>Institución
         </label>
-        <input type="text" id="institucion" name="institucion" required
+        <input type="text" id="institution" name="institution" required
           class="border border-gray-300 rounded-md px-3 py-2 focus:outline-none focus:ring-2 focus:ring-blue-400" />
       </div>
 
       <!-- Programa -->
       <div class="flex flex-col">
-        <label for="programa" class="mb-1 font-medium flex items-center gap-1">
+        <label for="program" class="mb-1 font-medium flex items-center gap-1">
           <i data-lucide="book-open" class="w-4 h-4 text-gray-500"></i>Programa
         </label>
-        <input type="text" id="programa" name="programa" required
+        <input type="text" id="program" name="program" required
           class="border border-gray-300 rounded-md px-3 py-2 focus:outline-none focus:ring-2 focus:ring-blue-400" />
       </div>
 
       <!-- Habilidades -->
       <div class="flex flex-col">
-        <label for="habilidades" class="mb-1 font-medium flex items-center gap-1">
+        <label for="skills" class="mb-1 font-medium flex items-center gap-1">
           <i data-lucide="settings" class="w-4 h-4 text-gray-500"></i>Habilidades (separadas por comas)
         </label>
-        <input type="text" id="habilidades" name="habilidades" placeholder="Ej: JavaScript, HTML, CSS"
+        <input type="text" id="skills" name="skills" placeholder="Ej: JavaScript, HTML, CSS"
+          class="border border-gray-300 rounded-md px-3 py-2 focus:outline-none focus:ring-2 focus:ring-blue-400" />
+      </div>
+
+      <!-- Idiomas -->
+      <div class="flex flex-col">
+        <label for="languages" class="mb-1 font-medium flex items-center gap-1">
+          <i data-lucide="globe" class="w-4 h-4 text-gray-500"></i>Idiomas (separados por comas)
+        </label>
+        <input type="text" id="languages" name="languages" placeholder="Ej: Español, Inglés"
           class="border border-gray-300 rounded-md px-3 py-2 focus:outline-none focus:ring-2 focus:ring-blue-400" />
       </div>
 
@@ -143,22 +195,36 @@
           class="border border-gray-300 rounded-md px-3 py-2 focus:outline-none focus:ring-2 focus:ring-blue-400 resize-none"></textarea>
       </div>
 
-      <!-- Hoja de vida (PDF URL) -->
+      <!-- Hoja de vida -->
       <div class="flex flex-col sm:col-span-2">
-        <label for="cvUrl" class="mb-1 font-medium flex items-center gap-1">
-          <i data-lucide="file-text" class="w-4 h-4 text-gray-500"></i>Enlace a tu hoja de vida (PDF)
+        <label for="cvFile" class="mb-1 font-medium flex items-center gap-1">
+          <i data-lucide="file-text" class="w-4 h-4 text-gray-500"></i>Sube tu hoja de vida (PDF)
         </label>
-        <input type="url" id="cvUrl" name="cvUrl" placeholder="https://..."
-          class="border border-gray-300 rounded-md px-3 py-2 focus:outline-none focus:ring-2 focus:ring-blue-400" />
+        <div class="flex items-center justify-center w-full">
+          <label for="cvFile"
+                 class="flex flex-col items-center justify-center w-full h-40 border-2 border-dashed border-gray-300 rounded-lg cursor-pointer bg-gray-50 hover:bg-gray-100 transition">
+            <div class="flex flex-col items-center justify-center pt-4 pb-4 px-4">
+              <svg class="w-8 h-8 mb-2 text-gray-400" xmlns="http://www.w3.org/2000/svg" fill="none"
+                   viewBox="0 0 20 16">
+                <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                      d="M13 13h3a3 3 0 0 0 0-6h-.025A5.56 5.56 0 0 0 16 6.5 5.5 5.5 0 0 0 5.207 5.021C5.137 5.017 5.071 5 5 5a4 4 0 0 0 0 8h2.167M10 15V6m0 0L8 8m2-2 2 2"/>
+              </svg>
+              <p class="mb-1 text-sm text-gray-500"><span class="font-semibold">Haz clic o arrastra tu archivo aquí</span></p>
+              <p class="text-xs text-gray-400">Solo PDF (máx. 5 MB)</p>
+            </div>
+            <input id="cvFile" name="cvFile" type="file" accept=".pdf" class="hidden"  />
+          </label>
+        </div>
       </div>
 
       <!-- Botón -->
       <div class="sm:col-span-2 flex justify-end mt-4">
-        <button type="submit" class="text-blue-600 border border-blue-600 hover:bg-[#5C4DFF] hover:text-white px-4 py-2 rounded-lg text-sm font-medium transition">
-            Guardar Perfil
+        <button type="submit"
+                class="text-blue-600 border border-blue-600 hover:bg-[#5C4DFF] hover:text-white px-4 py-2 rounded-lg text-sm font-medium transition">
+          Guardar Perfil
         </button>
-
       </div>
+
     </form>
   </div>
 </section>

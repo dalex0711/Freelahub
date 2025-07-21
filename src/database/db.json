@@ -11,18 +11,23 @@
   "profiles": [
     {
       "userId": 1,
-      "nombre": "Pedro Picapiedra",
-      "telefono": "3002150047",
-      "ciudad": "Barranquilla",
-      "institucion": "Riwi",
-      "programa": "Desarrollo de sofware",
-      "habilidades": [
-        "Javascript",
+      "name": "Pedro Picapiedra",
+      "cellPhone": "3002150003",
+      "mail": "pedro@pica.com",
+      "city": "barranquilla",
+      "institution": "riwi",
+      "program": "picar piedra",
+      "skills": [
+        "js",
         "css",
         "html"
       ],
-      "descripcion": "Soy pedro picapiedra, el que pica piedra.",
-      "cvUrl": "http://localhost:5173/profile",
+      "languages": [
+        "español",
+        "ingles"
+      ],
+      "descripcion": "Soy Pedro Picapiedra. El que pica piedra",
+      "cvUrl": {},
       "id": 1
     }
   ]
