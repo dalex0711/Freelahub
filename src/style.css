@@ -1,2 +1,26 @@
 @import "tailwindcss";
 
+  .nav-link.active {
+    color: #2563eb; /* Tailwind blue-600 */
+    font-weight: 600;
+  }
+
+  .pulse-dot {
+    width: 8px;
+    height: 8px;
+    background-color: #38bdf8; /* azul acento */
+    border-radius: 9999px;
+    margin-right: 8px;
+    animation: pulse 1.5s infinite;
+  }
+
+  @keyframes pulse {
+    0%, 100% {
+      transform: scale(1);
+      opacity: 0.6;
+    }
+    50% {
+      transform: scale(1.4);
+      opacity: 1;
+    }
+  }
