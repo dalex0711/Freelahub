@@ -41,13 +41,12 @@
     </button>
   </div>
 </header>
-<main class="pt-20 bg-white min-h-screen"> <!-- Ajustado de pt-24 a pt-20 -->
+<main class="pt-20 bg-white min-h-screen">
 
   <!-- Hero + Coders destacados -->
   <section class="relative bg-gradient-to-br from-blue-50 to-white border-b border-slate-200 py-5"> <!-- py-20 → py-16 -->
     <div class="max-w-6xl mx-auto px-6 flex flex-col lg:flex-row items-center gap-12">
       
-      <!-- Texto motivacional -->
       <div class="lg:w-1/2 text-center lg:text-left">
         <h1 class="text-3xl sm:text-4xl font-bold text-slate-800 mb-4 leading-tight">
           ¿Y si esta vez el que lo logra<br />
@@ -110,7 +109,6 @@
             </div>
           </div>
 
-          <!-- Frase debajo de los cards -->
           <p class="text-center text-slate-700 text-sm italic mt-6">
             ¿Qué esperas para estar aquí?
           </p>
@@ -121,5 +119,42 @@
       </div>
     </div>
   </section>
+
+
+
+<section id="offers" class="max-w-6xl mx-auto px-6 py-24 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8"></section>
+<template id="job-card-template">
+  <article class="bg-white border border-slate-200 rounded-2xl p-6 shadow-sm hover:shadow-lg transition flex flex-col justify-between h-full">
+    <header>
+      <!-- Título -->
+      <h3 class="text-xl font-semibold text-slate-800 mb-1 flex items-center">
+        <span class="pulse-dot mr-2"></span>
+        <span class="job-title">Nombre del Proyecto</span>
+      </h3>
+
+      <!-- Subtítulo -->
+      <p class="job-subinfo text-sm text-slate-500 mb-4">Tipo • Modalidad</p>
+    </header>
+
+    <!-- Tecnologías -->
+    <ul class="job-skills space-y-2 mb-4">
+     
+    </ul>
+
+    <!-- Descripción -->
+    <p class="job-description text-sm text-slate-600 line-clamp-4">
+      
+    </p>
+
+    <!-- Botón -->
+    <footer class="mt-6">
+      <button class="w-full flex items-center justify-center gap-2 bg-blue-600 text-white text-sm px-4 py-2 rounded-md hover:bg-blue-700 transition">
+        <i data-lucide="send" class="w-4 h-4"></i>
+        Postularse
+      </button>
+    </footer>
+  </article>
+</template>
+
 
 </main>
