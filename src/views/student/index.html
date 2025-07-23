@@ -41,151 +41,85 @@
     </button>
   </div>
 </header>
-<main class="pt-24 bg-white min-h-screen">
+<main class="pt-20 bg-white min-h-screen"> <!-- Ajustado de pt-24 a pt-20 -->
 
-  <!-- Banner único con inspiración + coders destacados -->
-  <section class="bg-gradient-to-br from-blue-50 to-white py-20 border-b border-slate-200">
-    <div class="max-w-6xl mx-auto px-6 text-center">
-      <!-- Título -->
-      <h1 class="text-3xl sm:text-4xl font-bold text-slate-800 mb-4">
-        ¿Y si tú eres el próximo en conseguirlo?
-      </h1>
-      <p class="text-slate-600 text-base sm:text-lg mb-8">
-        Hay talento, disciplina y muchas oportunidades. Todo empieza con dar el primer paso.
-      </p>
-      <!-- Botón con scroll directo -->
-      <a href="#ofertas" class="inline-block bg-blue-600 text-white px-6 py-2 rounded-md text-sm font-medium hover:bg-blue-700 transition">
-        Explorar oportunidades
-      </a>
+  <!-- Hero + Coders destacados -->
+  <section class="relative bg-gradient-to-br from-blue-50 to-white border-b border-slate-200 py-5"> <!-- py-20 → py-16 -->
+    <div class="max-w-6xl mx-auto px-6 flex flex-col lg:flex-row items-center gap-12">
+      
+      <!-- Texto motivacional -->
+      <div class="lg:w-1/2 text-center lg:text-left">
+        <h1 class="text-3xl sm:text-4xl font-bold text-slate-800 mb-4 leading-tight">
+          ¿Y si esta vez el que lo logra<br />
+          <span class="text-neutral-900">eres tú?</span>
+        </h1>
+        <p class="text-slate-600 text-base sm:text-lg mb-8">
+         Solo hay un paso entre pensarlo y hacerlo.
+        </p>
+        <a href="#ofertas" class="inline-block bg-blue-600 text-white px-6 py-2 rounded-md text-sm font-medium hover:bg-blue-700 transition">
+          Explorar oportunidades
+        </a>
+      </div>
 
       <!-- Coders destacados -->
-      <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8 mt-16 text-left">
-        <!-- Coder 1 -->
-        <div class="bg-white border border-slate-200 rounded-xl p-6 shadow-sm hover:shadow-md transition">
-          <div class="flex items-center gap-3 mb-2">
-            <i data-lucide="star" class="w-5 h-5 text-yellow-400"></i>
-            <h3 class="text-base font-semibold text-slate-800">Laura Ramírez</h3>
+      <div class="lg:w-1/2 relative">
+        <div class="bg-white shadow-xl rounded-2xl border border-slate-200 p-6 lg:p-8 relative z-10">
+          <h2 class="text-2xl font-bold text-slate-800 mb-4 text-center">Top 3 Coders destacados</h2>
+          
+          <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-1 gap-4">
+            <!-- Card 1 -->
+            <div class="bg-slate-50 border border-slate-200 rounded-xl p-3 shadow space-y-1.5">
+              <div class="flex items-center gap-1 mb-0.5">
+                <i data-lucide="trophy" class="w-4 h-4 text-yellow-500"></i>
+                <h3 class="text-sm font-semibold text-slate-800">Laura Ramírez</h3>
+              </div>
+              <p class="text-[11px] italic text-slate-600">“Mis proyectos personales me abrieron puertas que nunca imaginé.”</p>
+              <ul class="text-[11px] text-slate-700 space-y-1">
+                <li class="flex items-center gap-1"><i data-lucide="globe" class="w-3.5 h-3.5"></i> Inglés B2</li>
+                <li class="flex items-center gap-1"><i data-lucide="brain" class="w-3.5 h-3.5"></i> Liderazgo</li>
+                <li class="flex items-center gap-1"><i data-lucide="code" class="w-3.5 h-3.5"></i> React • JS</li>
+              </ul>
+            </div>
+
+            <!-- Card 2 -->
+            <div class="bg-slate-50 border border-slate-200 rounded-xl p-3 shadow space-y-1.5">
+              <div class="flex items-center gap-1 mb-0.5">
+                <i data-lucide="trophy" class="w-4 h-4 text-yellow-500"></i>
+                <h3 class="text-sm font-semibold text-slate-800">Sebastián Gómez</h3>
+              </div>
+              <p class="text-[11px] italic text-slate-600">“Pedir ayuda y mostrar lo que sabía fue el mejor primer paso.”</p>
+              <ul class="text-[11px] text-slate-700 space-y-1">
+                <li class="flex items-center gap-1"><i data-lucide="globe" class="w-3.5 h-3.5"></i> Inglés A2</li>
+                <li class="flex items-center gap-1"><i data-lucide="brain" class="w-3.5 h-3.5"></i> Resolución de problemas</li>
+                <li class="flex items-center gap-1"><i data-lucide="code" class="w-3.5 h-3.5"></i> Node • SQL</li>
+              </ul>
+            </div>
+
+            <!-- Card 3 -->
+            <div class="bg-slate-50 border border-slate-200 rounded-xl p-3 shadow space-y-1.5">
+              <div class="flex items-center gap-1 mb-0.5">
+                <i data-lucide="trophy" class="w-4 h-4 text-yellow-500"></i>
+                <h3 class="text-sm font-semibold text-slate-800">Andrés Quintero</h3>
+              </div>
+              <p class="text-[11px] italic text-slate-600">“Un reto se convirtió en mi primer empleo. No hay vuelta atrás.”</p>
+              <ul class="text-[11px] text-slate-700 space-y-1">
+                <li class="flex items-center gap-1"><i data-lucide="globe" class="w-3.5 h-3.5"></i> Inglés B1</li>
+                <li class="flex items-center gap-1"><i data-lucide="brain" class="w-3.5 h-3.5"></i> Trabajo en equipo</li>
+                <li class="flex items-center gap-1"><i data-lucide="code" class="w-3.5 h-3.5"></i> HTML • Vue</li>
+              </ul>
+            </div>
           </div>
-          <p class="text-sm text-slate-600">
-            “Nunca imaginé que mis proyectos personales serían la puerta a nuevas oportunidades.”
+
+          <!-- Frase debajo de los cards -->
+          <p class="text-center text-slate-700 text-sm italic mt-6">
+            ¿Qué esperas para estar aquí?
           </p>
         </div>
 
-        <!-- Coder 2 -->
-        <div class="bg-white border border-slate-200 rounded-xl p-6 shadow-sm hover:shadow-md transition">
-          <div class="flex items-center gap-3 mb-2">
-            <i data-lucide="star" class="w-5 h-5 text-yellow-400"></i>
-            <h3 class="text-base font-semibold text-slate-800">Sebastián Gómez</h3>
-          </div>
-          <p class="text-sm text-slate-600">
-            “Me atreví a mostrar lo que sabía y aprendí a pedir ayuda. Agradezco haber dado ese paso.”
-          </p>
-        </div>
-
-        <!-- Coder 3 -->
-        <div class="bg-white border border-slate-200 rounded-xl p-6 shadow-sm hover:shadow-md transition">
-          <div class="flex items-center gap-3 mb-2">
-            <i data-lucide="star" class="w-5 h-5 text-yellow-400"></i>
-            <h3 class="text-base font-semibold text-slate-800">Andrés Quintero</h3>
-          </div>
-          <p class="text-sm text-slate-600">
-            “Lo que comenzó como un reto terminó siendo mi primer empleo.”
-          </p>
-        </div>
+        <!-- Fondo decorativo diagonal -->
+        <div class="absolute top-0 right-0 w-full h-full bg-blue-100 transform -skew-x-6 rounded-2xl z-0"></div>
       </div>
     </div>
-  </section>
-
-  <!-- Ofertas de trabajo -->
-  <section id="ofertas" class="max-w-6xl mx-auto px-6 py-24">
-   <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-
-  <!-- Tarjeta 1 -->
-  <div class="bg-white border border-slate-200 rounded-xl p-6 shadow-md transition hover:shadow-lg flex flex-col justify-between">
-    <div>
-      <h3 class="text-lg font-bold text-slate-800 mb-1 flex items-center">
-      <span class="pulse-dot"></span> Diseño UX/UI
-    </h3>
-      <p class="text-sm text-slate-500 mb-3">Rappi • Medellín • Híbrido</p>
-
-      <div class="flex items-center gap-2 text-sm text-slate-600 mb-2">
-        <i data-lucide="laptop" class="w-4 h-4"></i>
-        <span>React • Tailwind • Git</span>
-      </div>
-
-      <div class="flex items-center gap-2 text-sm text-slate-600 mb-2">
-        <i data-lucide="wallet" class="w-4 h-4"></i>
-        <span>$900.000 COP / mes</span>
-      </div>
-
-      <p class="text-sm text-slate-700 mt-2">
-        Únete al equipo de diseño e ingeniería de Rappi y trabaja en productos reales con impacto.
-      </p>
-    </div>
-    <button class="mt-4 inline-flex items-center justify-center gap-2 bg-blue-600 text-white text-sm px-4 py-2 rounded-md hover:bg-blue-700 transition">
-      <i data-lucide="send" class="w-4 h-4"></i>
-      Postularse
-    </button>
-  </div>
-
-  <!-- Tarjeta 2 -->
-  <div class="bg-white border border-slate-200 rounded-xl p-6 shadow-md transition hover:shadow-lg flex flex-col justify-between">
-    <div>
-      <h3 class="text-lg font-bold text-slate-800 mb-1 flex items-center">
-        <span class="pulse-dot"></span> Back en practicas
-      </h3>
-      <p class="text-sm text-slate-500 mb-3">Platzi • Remoto</p>
-
-      <div class="flex items-center gap-2 text-sm text-slate-600 mb-2">
-        <i data-lucide="server" class="w-4 h-4"></i>
-        <span>Node.js • PostgreSQL</span>
-      </div>
-
-      <div class="flex items-center gap-2 text-sm text-slate-600 mb-2">
-        <i data-lucide="wallet" class="w-4 h-4"></i>
-        <span>$1.200.000 COP / mes</span>
-      </div>
-
-      <p class="text-sm text-slate-700 mt-2">
-        Participa en proyectos reales con impacto directo en la plataforma educativa.
-      </p>
-    </div>
-    <button class="mt-4 inline-flex items-center justify-center gap-2 bg-blue-600 text-white text-sm px-4 py-2 rounded-md hover:bg-blue-700 transition">
-      <i data-lucide="send" class="w-4 h-4"></i>
-      Postularse
-    </button>
-  </div>
-
-  <!-- Tarjeta 3 -->
-  <div class="bg-white border border-slate-200 rounded-xl p-6 shadow-md transition hover:shadow-lg flex flex-col justify-between">
-    <div>
-      <h3 class="text-lg font-bold text-slate-800 mb-1 flex items-center">
-       <span class="pulse-dot"></span> Frontend Intern
-      </h3>
-      <p class="text-sm text-slate-500 mb-3">Startup Local • Bogotá • Presencial</p>
-
-      <div class="flex items-center gap-2 text-sm text-slate-600 mb-2">
-        <i data-lucide="pen-tool" class="w-4 h-4"></i>
-        <span>Figma • Research • UX Writing</span>
-      </div>
-
-      <div class="flex items-center gap-2 text-sm text-slate-600 mb-2">
-        <i data-lucide="wallet" class="w-4 h-4"></i>
-        <span>$800.000 COP / mes + bono</span>
-      </div>
-
-      <p class="text-sm text-slate-700 mt-2">
-        Colabora en el diseño de productos digitales usados por miles de personas.
-      </p>
-    </div>
-    <button class="mt-4 inline-flex items-center justify-center gap-2 bg-blue-600 text-white text-sm px-4 py-2 rounded-md hover:bg-blue-700 transition">
-      <i data-lucide="send" class="w-4 h-4"></i>
-      Postularse
-    </button>
-  </div>
-
-</div>
-
   </section>
 
 </main>

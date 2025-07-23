@@ -1,13 +1,6 @@
 {
   "users": [
     {
-      "name": "user1",
-      "email": "user@gmail.com",
-      "password": "bcb4dead2eb9cf647f0b065497c1d74f95fd60df6ec1d51ae005e938ca1c1015caf52491cf0a4e61a41f12187e32e6eb5f147fe0d22ff540bba55f7470fbfb6e",
-      "rol": "student",
-      "id": 1
-    },
-    {
       "name": "dalexa",
       "email": "dal@gmail.com",
       "password": "b1d0f65b562f4713247714adf9c47c7342c1e37e81f7146f48b040f4ab8ec89fc86a631c9586cd82f6b59cead0e482fb6c98ae0a45c78dc42de0e1139e70b28f",
